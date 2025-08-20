@@ -20,6 +20,10 @@ PostgreSQLでもストアドプロシージャ（stored procedures）をサポ�
 
 ---
 
+PostgreSQLでもストアドプロシージャ（stored procedures）をサポートしていますが、他のRDBMS（例：OracleやSQL Server）と少し異なる点があります。以下に、PostgreSQLでのストアドプロシージャ対応について概要を説明します。
+
+---
+
 ### ✅ PostgreSQLのストアドプロシージャ概要
 
 PostgreSQL 11以降では、`CREATE PROCEDURE`構文が導入され、**トランザクション制御が可能なストアドプロシージャ**が正式にサポートされました。
@@ -69,6 +73,12 @@ CALL sample_procedure(100, result);
 - ストアドプロシージャは `CALL` でしか呼び出せません。
 - `RAISE NOTICE` などでログ出力可能。
 - `LANGUAGE plpgsql` が一般的ですが、SQLや他言語も使用可能。
+
+---
+
+もし、既存のOracleやSQL ServerのストアドプロシージャをPostgreSQLに移植したい場合は、構文の違いやトランザクション制御の扱いに注意が必要です。具体的なコード例や移植のサポートもできますので、必要であれば教えてください。
+
+何か特定のストアドプロシージャをPostgreSQLに対応させたいですか？それとも基本的なテンプレートが欲しいですか？
 
 ---
 
